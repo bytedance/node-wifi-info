@@ -1,6 +1,9 @@
 # npm
 node_modules
 build
+*.log
+
+dist
 
 # IntelliJ
 *.iml
@@ -10,3 +13,6 @@ build
 
 # VSCode
 .vscode/
+
+#macOS Trash
+.DS_Store

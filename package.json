@@ -1,14 +1,24 @@
 {
   "name": "node-wifi-info",
-  "version": "0.0.1",
-  "description": "Node wifi info with native support on macOS and Windows",
-  "main": "bindings.js",
+  "version": "1.0.0",
+  "description": "Node WiFi info with native support on macOS and Windows",
+  "main": "node_wifi_info.js",
+  "types": "node_wifi_info.d.ts",
   "scripts": {
-    "build": "node-gyp build",
-    "install": "node-gyp rebuild",
-    "test": "node ./index.js"
+    "build": "npm run build:native",
+    "build:native": "node-gyp rebuild",
+    "prepublish": "npm run build",
+    "clean": "node-gyp clean && rm -r dist",
+    "postinstall": "npm run build",
+    "test": "node test/index.js"
+  },
+  "devDependencies": {
+    "cash-rm": "^0.2.0",
+    "node-gyp": "^4.0.0",
+    "typescript": "^3.5.1"
   },
   "dependencies": {
-    "nan": "^2.14.0"
+    "bindings": "^1.5.0",
+    "node-addon-api": "^1.6.3"
   }
 }
