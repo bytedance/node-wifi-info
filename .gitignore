@@ -1,0 +1,12 @@
+# npm
+node_modules
+build
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VSCode
+.vscode/

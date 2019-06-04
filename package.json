@@ -1,0 +1,14 @@
+{
+  "name": "node-wifi-info",
+  "version": "0.0.1",
+  "description": "Node wifi info with native support on macOS and Windows",
+  "main": "bindings.js",
+  "scripts": {
+    "build": "node-gyp build",
+    "install": "node-gyp rebuild",
+    "test": "node ./index.js"
+  },
+  "dependencies": {
+    "nan": "^2.14.0"
+  }
+}
