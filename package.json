@@ -4,7 +4,11 @@
   "description": "Node WiFi info with native support on macOS and Windows",
   "main": "node_wifi_info.js",
   "types": "node_wifi_info.d.ts",
-  "keywords": ["wifi", "node-wifi", "native"],
+  "keywords": [
+    "wifi",
+    "node-wifi",
+    "native"
+  ],
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
