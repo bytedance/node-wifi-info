@@ -1,9 +1,16 @@
 {
   "name": "node-wifi-info",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node WiFi info with native support on macOS and Windows",
   "main": "node_wifi_info.js",
   "types": "node_wifi_info.d.ts",
+  "keywords": ["wifi", "node-wifi", "native"],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "github.com/bytedance/node-wifi-info"
+  },
+  "author": "codetector<codetector@codetector.cn>",
   "scripts": {
     "build": "npm run build:native",
     "build:native": "node-gyp rebuild",
