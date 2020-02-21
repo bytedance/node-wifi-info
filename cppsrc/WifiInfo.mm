@@ -16,5 +16,15 @@ nodewifiinfo::WiFiInfo nodewifiinfo::getWiFiInfo() {
             }
         }
     }
+
+    return info;
+}
+
+std::vector<nodewifiinfo::WiFiInfo> nodewifiinfo::getAllWiFiInfo() {
+    std::vector<nodewifiinfo::WiFiInfo> info;
+
+    // TODO: implement: iterate over all the wifi network and add them here
+    info.push_back(nodewifiinfo::getWiFiInfo());
+
     return info;
 }

@@ -52,20 +52,24 @@ nodewifiinfo::WiFiInfo nodewifiinfo::getWiFiInfo() {
 		if (dwResult != ERROR_SUCCESS) {
 			continue;
 		}
+
 		if (pConnectInfo->isState != wlan_interface_state_connected) {
 			WlanFreeMemory(pConnectInfo);
 			continue;
 		}
+
 		//SSID
 		info.ssid = std::string(
 			(char*)pConnectInfo->wlanAssociationAttributes.dot11Ssid.ucSSID,
 			pConnectInfo->wlanAssociationAttributes.dot11Ssid.uSSIDLength
 		);
+
 		// BSSID
 		char bssidAddr[18];
 		for (short i = 0; i < sizeof(pConnectInfo->wlanAssociationAttributes.dot11Bssid); i++) { 
 			sprintf((bssidAddr + (i * 3)),"%02x:", pConnectInfo->wlanAssociationAttributes.dot11Bssid[i]);
 		}
+
 		bssidAddr[17] = '\0';
 		info.bssid = std::string(bssidAddr);
 		// Secure
@@ -79,4 +83,13 @@ nodewifiinfo::WiFiInfo nodewifiinfo::getWiFiInfo() {
 		return info;
 	}
 	return info;
+}
+
+std::vector<nodewifiinfo::WiFiInfo> nodewifiinfo::getAllWiFiInfo() {
+    std::vector<nodewifiinfo::WiFiInfo> info;
+
+	// TODO: implement: iterate over all the wifi network and add them here
+    info.push_back(nodewifiinfo::getWiFiInfo());
+
+    return info;
 }

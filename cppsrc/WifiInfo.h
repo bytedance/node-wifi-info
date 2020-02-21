@@ -7,5 +7,7 @@ namespace nodewifiinfo {
         bool secure;
         int32_t strength;
     } WiFiInfo;
+
     WiFiInfo getWiFiInfo();
+    std::vector<WiFiInfo> getAllWiFiInfo();
 }

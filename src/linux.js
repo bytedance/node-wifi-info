@@ -75,12 +75,16 @@ function getAndParseWifiInfo() {
     } catch (e) {
         console.error("Error whild getting wifi info. Do you have nmcli installed?", e);
     }
-    
+
     return new WifiInfo();
 }
 
 module.exports = {
     getWiFiInfoLinux() {
         return getAndParseWifiInfo();
+    },
+    getAllWiFiInfoLinux() {
+        // TODO: implement: iterate over all the wifi network and add them here
+        return [getAndParseWifiInfo()];
     }
 };

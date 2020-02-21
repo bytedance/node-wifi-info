@@ -7,6 +7,7 @@ declare interface WifiInfo {
 
 declare const _default: {
     getWifiInfo(): WifiInfo;
+    getAllWifiInfo(): Array<WifiInfo>;
 };
 
 export = _default;
