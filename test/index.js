@@ -4,12 +4,30 @@ async function sleep(millis) {
   return new Promise(resolve => setTimeout(resolve, millis));
 }
 
-async function main() {
+async function getWifiInfoTest() {
+  console.log();
+  console.log('getWifiInfo() Test:');
+  console.log();
+  console.log('Network:', nodeWifiInfo.getWifiInfo());
+}
+
+async function getAllWifiInfoTest() {
+  console.log();
+  console.log('getAllWifiInfo() Test:');
+  console.log();
+  console.log('Network(s):', nodeWifiInfo.getAllWifiInfo());
+}
+
+async function getWifiInfoSpeedTest() {
   var max = 0;
   var sum = 0;
   var data = [];
   const limit = 1000;
 
+  console.log();
+  console.log('getWifiInfo() Speed Test:');
+  console.log();
+  
   for (var i = 0; i < limit; i++) {
     const start = new Date().getTime();
     const rtn = nodeWifiInfo.getWifiInfo();
@@ -24,7 +42,7 @@ async function main() {
     }
 
     console.log("time =", delta);
-    
+
     data.push(delta);
     await sleep(Math.random() * 1000);
   }
@@ -44,4 +62,7 @@ async function main() {
   console.log(obj);
 }
 
-main();
+// run tests
+getWifiInfoTest();
+getAllWifiInfoTest();
+getWifiInfoSpeedTest();
