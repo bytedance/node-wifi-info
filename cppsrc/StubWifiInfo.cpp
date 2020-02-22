@@ -5,3 +5,9 @@
 nodewifiinfo::WiFiInfo nodewifiinfo::getWiFiInfo() {
     return {};
 }
+
+std::vector<nodewifiinfo::WiFiInfo> nodewifiinfo::getAllWiFiInfo() {
+    std::vector<nodewifiinfo::WiFiInfo> info{ {} };
+
+    return info;
+}
