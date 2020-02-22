@@ -1,6 +1,6 @@
 {
   "name": "node-wifi-info",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Node WiFi info with native support on macOS and Windows",
   "main": "node_wifi_info.js",
   "types": "node_wifi_info.d.ts",
